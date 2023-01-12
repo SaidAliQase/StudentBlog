@@ -1,0 +1,73 @@
+{% extends 'layout.html' %}
+{% block body %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dashboard</title>
+</head>
+<body>
+<div class="container">
+	<h1><center><span  class="badge badge-primary">Student's Dashboard Page</span></center></h1>
+	<div class="container">
+	<h3><center><span  class="badge badge-primary">This is only for students</span></center></h3>
+		
+		<h5>WELCOME MR/MS. {{session.username}}</h5>
+<center>
+<a href="/add_post">			
+<button type="button" class="btn btn-primary">Add Post</button>
+</a>
+
+<a href="/upfile">			
+<button type="button" class="btn btn-primary">ADD FILES</button>
+</a>
+</center>
+
+	</div>
+<div>
+	<table class="table table-striped table-bordered table-sm ">
+		
+			<tr>
+				<th> ID </th>
+				<th> TITLE </th>
+				<th> AUTHOR </th>
+				<th> BODY </th>
+				<th> DATE </th>
+				<th>  </th>
+				<th>  </th>
+
+			</tr>
+
+				{% for post in posts %}
+
+				<tr> 
+					<td>{{post.id}}</td>
+					<td>{{post.title}}</td>
+					<td>{{post.author}}</td>
+					<td>{{post.body}}</td>
+					<td>{{post.create_date}}</td>
+					
+
+					<td><a href="edit_post/{{post.id}}" class="btn btn-primary">Edit</a></td>
+
+					<td>
+
+					<form action="{{url_for('delete_post', id=post.id)}}"  method="post">
+
+					<input type="submit" name="DELETE" value="DELETE" class="btn btn-danger">
+
+					</td>
+
+
+				</tr>
+
+				{% endfor %}
+	</table>
+
+</div>
+<br><br><br><br>
+
+</div>
+</body>
+</html>
+
+{% endblock %}

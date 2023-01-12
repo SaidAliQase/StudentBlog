@@ -1,0 +1,75 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+	h1 {
+  text-shadow: 2px 2px 5px black;
+}
+
+	.jumbotron {
+    background: rgba(80, 80, 80, 0.8);
+}
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("https://images.pexels.com/photos/586570/pexels-photo-586570.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+}
+</style>
+</head>
+<body>
+<div class="bg">
+
+
+<span><h1 class="text-lg-center text-light">WELCOME TO OUR WEBSITE.</h1></span>
+
+<div class="jumbotron">
+<h5 class="text-lg-center text-light">Welcome to our website! We are thrilled to have you visit and explore the many features and resources we have to offer. Whether you are looking for information, inspiration, or a way to share information with others, we hope you will find what you need here. Our goal is to provide you with the information and resources you need to live your best life. Thank you for visiting and please feel free to reach out to us with any questions or feedback. We look forward to connecting with you!.</h5>
+</div>
+<div class="jumbotron" style="width: 49%; height: 200px; float: left;">
+<h5 class="text-lg-left text-light">IF YOU ARE STUDENTS WHO WANTS TO SEE SHARED POSTS YOU DON'T HAVE TO REGISTER AND THE POSTS SHARED BY THE STUDENTS ARE HERE.</h5>
+<a class="btn btn-info" href="/posts" role="submit">Click here to see all the posts</a>
+</div>
+<div class="jumbotron" style="margin-left: 50%; height: 200px;">
+<h5 class="text-lg-left text-light">IF YOU ARE A STUDENT WHO IS WILLING TO SHARE POSTS,  YOU WILL NEED TO REGISTER AND USE THE USERNAME YOU PROVIDED TO LOGIN.
+
+</h5>
+<a class="btn btn-primary" href="/register" role="submit">Click here to register</a>
+
+
+
+  
+
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+</body>
+</html>
+
+{% endblock %}

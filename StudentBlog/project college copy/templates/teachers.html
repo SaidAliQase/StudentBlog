@@ -1,0 +1,157 @@
+{% extends 'layout.html' %}
+{% block body %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+</style>
+</head>
+<body>
+
+<h2><span  class="badge badge-dark">Meet the teachers from computer science department</span></h2>
+ 
+<br>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="https://www.shutterstock.com/image-photo/female-teacher-standing-near-blackboard-260nw-2019987659.jpg" alt="John" style="width:100%">
+      <div class="container">
+        <h2>Rachel Green</h2>
+        <p class="title"></p>
+        <p>HEAD OF THE DEPARTMENT</p>
+        <p>rachel@stphilos.ac.in</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="https://www.shutterstock.com/image-photo/young-asian-teacher-man-teaching-260nw-1928551622.jpg" alt="Mike" style="width:100%">
+      <div class="container">
+        <h2>Mike Ross</h2>
+        <p class="title">ASSISTANT PROFESSOR</p>
+        <p>rose@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="https://www.shutterstock.com/image-photo/portrait-indian-lady-teacher-stands-260nw-407082859.jpg" alt="Jane" style="width:100%">
+      
+      <div class="container">
+        <h2>Phoebe Buffay</h2>
+        <p class="title">ASSISTANT PROFESSOR</p>
+        <p>phoebe@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+<div class="column">
+    <div class="card">
+      <img src="https://cdn.videvo.net/videvo_files/video/premium/getty_113/customThumbnails/istock-1078308404.jpg" alt="John" style="width:100%">
+      <div class="container">
+        <h2>Mohammed Ali</h2>
+        <p class="title">ASSISTANT PROFESSOR</p>
+          <p>Ali@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="column">
+    <div class="card">
+      <img src="https://apicms.thestar.com.my/uploads/images/2022/05/15/1585587.jpg" alt="John" style="width:100%">
+      <div class="container">
+        <h2>Naomi Lee</h2>
+        <p class="title">ASSISTANT PROFESSOR</p>
+        <p>Naomi@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="column">
+    <div class="card">
+      <img src="https://marvel-b1-cdn.bc0a.com/f00000000026007/resilienteducator.com/wp-content/uploads/2014/11/math-teacher.jpg" alt="John" style="width:100%">
+      <div class="container">
+        <h2>Monica Geller</h2>
+        <p class="title">ASSISTANT PROFESSOR</p>
+        <p>monica@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+</body>
+</html>
+{% endblock %}

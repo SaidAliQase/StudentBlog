@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div class="container-fluid text-justify box">
+	
+<h1>{{post.title}}</h1>
+
+<hr>
+{{post.body | safe}}
+
+<hr>
+
+</div>
+</body>
+</html>
+
+{% endblock %}

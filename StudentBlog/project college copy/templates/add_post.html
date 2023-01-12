@@ -1,0 +1,66 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<!DOCTYPE html>
+<html>
+<style>
+body {
+  font-family: Arial;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+</style>
+<body>
+
+<h2 style="text-align:center">ADD POST</h2>
+<h3 style="text-align:center">Please write some posts</h3><br>
+
+<div class="container" style="height: 35%; width: 35%;">
+{% from "nav/_formhelpers.html" import render_field %}
+  <form method="POST" action="">
+
+  <div class="form-group">
+      {{render_field(form.title, class_="form-control")}}
+  </div>
+
+  <div class="form-group">
+    
+    {{render_field(form.body, class_="form-control", id="editor")}}
+
+  </div>
+
+  <p>
+        <input type="submit" class="btn btn-primary">
+  </p>
+
+</form>
+</body>
+</html>
+
+
+
+{% endblock %}

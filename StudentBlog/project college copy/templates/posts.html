@@ -1,0 +1,67 @@
+{% extends 'layout.html' %}
+{% block body %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dashboard</title>
+	<style> 
+ .object {
+  animation: MoveUpDown 15s linear infinite;
+  position: absolute;
+  right: 10%;
+  bottom: 0;
+}
+
+@keyframes MoveUpDown {
+   0%   {top: 40px;}
+  
+  50% {top: 650px;}
+
+  75%   {top: 650px;}
+  
+  100% {top: 40px;}
+
+
+
+
+  
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="object">
+ <img src="https://www.stphilos.ac.in/wp-content/uploads/2018/02/Logo.jpg">
+</div>
+
+<div>
+<h1><span class="badge badge-dark">ALL THE POSTS FROM THE STUDENTS</span></h1>	
+<div>
+
+<div >
+<img src="https://c4.wallpaperflare.com/wallpaper/11/624/62/simple-desk-clocks-books-wallpaper-preview.jpg" class="img-fluid" />
+	<h3><span class="badge badge-dark">The list of all posts made by students</span></h3>
+</div>
+
+{% for post in posts %}
+
+<h5><span  class="badge badge-secondary">{{post.title}}</h5></span>
+
+
+<p><span  class="badge badge-secondary">Written by {{post.author}} on {{post.create_date}}</span></p>
+
+<a href="post/{{post.id}}" class="btn btn-lg btn-info">Read the post</a>
+
+
+{% endfor %}
+
+
+</div>
+<br><br><br><br>
+
+</div>
+</div>	
+</body>
+</html>
+
+{% endblock %}
